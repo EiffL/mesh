@@ -22,7 +22,6 @@ from __future__ import print_function
 import math
 import os
 
-import gin
 from mesh_tensorflow import ops_with_redefined_builtins as mtf
 from mesh_tensorflow import tpu_variables
 from mesh_tensorflow import utils
@@ -33,7 +32,6 @@ import tensorflow.compat.v1 as tf
 from tensorflow.python.tpu.ops import tpu_ops  # pylint: disable=g-direct-tensorflow-import
 
 
-@gin.configurable
 class SimdMeshImpl(mtf.MeshImpl):
   """Mesh implementation for TPU using SIMD and MPI operations."""
 
